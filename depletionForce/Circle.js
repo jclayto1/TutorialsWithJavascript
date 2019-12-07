@@ -1,5 +1,5 @@
-shift = 1.0
-count = 0.
+let shift = 1.0;
+let count = 0.;
 
 function Circle(x,y,r) {
     var canvas = document.getElementById('canvas');
