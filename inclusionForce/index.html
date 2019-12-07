@@ -1,0 +1,31 @@
+<html>
+<body>
+<style>
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	border: 0;
+	overflow: show; /*  Disable scrollbars */
+	display: block;  /* No floating content on sides */
+}
+canvas {
+	border: 1px solid black;
+}
+</style>
+<body id='body'></body>
+<script src='../matter.js'>
+</script>
+<script src='../matter-wrap.js'>
+</script>
+<canvas id="canvas" width="500" height="500" ></canvas>
+<p>
+<button onclick="showSolvent()">Show water</button>
+<button onclick="restart()">Reset</button>
+</p>
+
+<script src='Box.js'></script>
+<script src='Circle.js'></script>
+<script src='inclusionForce.js'></script>
+</body>
+</html>

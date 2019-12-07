@@ -1,0 +1,58 @@
+<html>
+<body>
+<style>
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	border: 0;
+	overflow: show; /*  Disable scrollbars */
+	display: block;  /* No floating content on sides */
+}
+canvas {
+	border: 1px solid black;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row {
+
+}
+</style>
+<body id='body'></body>
+
+<div class="row">
+	<div class="column">
+		<canvas id="canvas" width="500" height="500" ></canvas>
+	</div>
+	<div class="column">
+		<canvas id="trail" width="500" height="500" ></canvas>
+	</div>
+</div>
+
+<div class="row">
+	<div class="column">
+		<div class="slidecontainer">
+  			<p>Temperature (avg. velocity):</p>
+  			<input type="range" min="1" max="5" value="3" id="tempSlide">
+		</div>
+		<button onclick="showSolvent()">Show water</button>
+		<button onclick="restart()">Reset</button>
+		<button onclick="showVelocity()">Measure velocity</button>
+		<p id="avgVel"></p>
+	</div>
+	<div class="column">
+		<button onclick="measureDiffusion()">Measure diffusion coeff.</button>
+		<button onclick="showTailToggle()">Draw tail</button>
+		<p id="diffCoef"></p>
+	</div>
+</div>
+
+<script src='../matter.js'></script>
+<script src='../matter-wrap.js'></script>
+<script src='Circle.js'></script>
+<script src='diffusion.js'></script>
+</body>
+</html>
