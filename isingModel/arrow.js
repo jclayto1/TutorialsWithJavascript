@@ -11,13 +11,13 @@ class Arrow {
 
     }
     draw(){
+        if(this.spin > 0) {this.ctx.strokeStyle='rgb(200,0,0)'}
+        else{this.ctx.strokeStyle='rgb(0,200,0)'}
         this.ctx.beginPath();
         this.ctx.moveTo(this.pos[0],this.pos[1]-(this.length/2.));
         this.ctx.lineTo(this.pos[0],this.pos[1]+(this.length/2.));
         this.ctx.stroke();
         var dir = this.spin;
-//        if(this.direction == 'up') { dir = -1; }
-//        if(this.direction == 'down') { dir = 1;}
         this.ctx.beginPath();
         this.ctx.moveTo(this.pos[0]-(this.arrowWidth/2.),this.pos[1]);
         this.ctx.lineTo(this.pos[0],this.pos[1]+(this.length*dir/2.));

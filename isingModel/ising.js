@@ -1,11 +1,13 @@
 var canvas = document.getElementById('canvas');
+var tempSlide = document.getElementById('tempSlide');
+var beta = 1.0/parseInt(tempSlide.value);
+tempSlide.oninput = function(){beta = 1.0/parseInt(tempSlide.value);};
 var arrowSpacing = 30;
-var colLength = Math.floor(canvas.width/arrowSpacing);
-var rowLength = Math.floor(canvas.height/arrowSpacing);
+var colLength = Math.floor(canvas.height/arrowSpacing);
+var rowLength = Math.floor(canvas.width/arrowSpacing);
 var arrowArray = new Array(rowLength);
-var beta = 1;
-var framePerSecond = 1;
-var J= 1;
+var framePerSecond = 2;
+var J= 1.;
 
 function init() {
     //Form arrow array
