@@ -21,6 +21,7 @@ let frame = 0;
 let frameLimit = 500;
 let beta = 1.;
 let maxStep = 5;
+let numHistFrames = 1000;
 let potentialFunc = singleWell
 function init() {
         //Grab canvas
@@ -102,17 +103,18 @@ function step() {
         let bin = Math.floor((x-xRange[0])/(xRange[1]-xRange[0])*binNum);
         counts[bin]++;
         frame++;
-        if (frame > 500) {
-            traj = new Plot(function(x){return counts[x]},trajPlot,xRange,[-0.1,500]);
-            traj.clearPlot();
-            let x = [...Array(binNum).keys()].map((val) => ((val+.5)/binNum)*(xRange[1]-xRange[0])+xRange[0]);
-            traj.drawLine(x,counts);
+        traj = new Plot(function(x){return counts[x]},trajPlot,xRange,[-0.1,500]);
+        traj.clearPlot();
+        let tmp = [...Array(binNum).keys()].map((val) => ((val+.5)/binNum)*(xRange[1]-xRange[0])+xRange[0]);
+        traj.drawLine(tmp,counts);
+        if(frame>numHistFrames) {
             document.getElementById("trajButton").disabled = false;
             document.getElementById("histButton").disabled = false;
             drawHist = false;
             frame = 0;
         }
     }
+
     window.requestAnimationFrame(step);
 }
 
