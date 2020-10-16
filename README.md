@@ -5,7 +5,7 @@ Here is a collection of examples written to demonstrate various concepts in stat
 Some of these examples rely on [Matter.js](http://brm.io/matter-js/) to calculate collisions of bodies; the needed files are included in the root directory of this repo.
 
 ## Working links:
-- [Diffusion/Brownian motion](diffusion/index.html)
-- [Sampling a free energy surface](freeEnergy/index.html)
-- [Depletion force](depletionForce/index.html)
-- [Ising model](isingModel/index.html)
+- [Diffusion/Brownian motion](https://jclayto1.github.io/TutorialsWithJavascript/diffusion/index.html)
+- [Sampling a free energy surface](https://jclayto1.github.io/TutorialsWithJavascript/freeEnergy/index.html)
+- [Depletion force](https://jclayto1.github.io/TutorialsWithJavascript/depletionForce/index.html)
+- [Ising model](https://jclayto1.github.io/TutorialsWithJavascript/isingModel/index.html)
